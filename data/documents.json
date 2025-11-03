@@ -1,0 +1,79 @@
+[
+  {
+    "id": "sample-1",
+    "title": "Short Sample",
+    "content": "This is a short document for testing. It contains just a few sentences to demonstrate basic functionality.",
+    "createdAt": "2025-10-30T10:00:00.000Z",
+    "status": "completed",
+    "summary": "This is a short document for testing. It contains just a few sentences to demonstrate basic functionality. It is intended to be used as a test case for a new tool or feature. For more information, or to try out your own tool, visit the tool's official website.",
+    "sentiment": {
+      "label": "neutral",
+      "score": 0.9
+    },
+    "entities": []
+  },
+  {
+    "id": "sample-2",
+    "title": "Medium Sample",
+    "content": "This is a medium-length document. It contains several paragraphs to test how the system handles moderate amounts of text. The content discusses various topics including technology, innovation, and user experience. This sample should be sufficient to generate meaningful analysis results from the AI models. The document continues with more detailed information about document processing and natural language understanding capabilities.",
+    "createdAt": "2025-10-30T11:00:00.000Z",
+    "status": "completed",
+    "summary": "This is a medium-length document. It contains several paragraphs to test how the system handles moderate amounts of text. This sample should be sufficient to generate meaningful analysis results from the AI models. The document continues with more detailed information about document processing and natural language understanding capabilities.",
+    "sentiment": {
+      "label": "neutral",
+      "score": 0.74
+    },
+    "entities": [
+      {
+        "type": "MISC",
+        "value": "AI"
+      }
+    ]
+  },
+  {
+    "id": "sample-3",
+    "title": "Long Sample",
+    "content": "This is a long document designed to test the system's capability with substantial text. Artificial Intelligence has revolutionized many industries in recent years. Companies like Google, Microsoft, and OpenAI have made significant advances in natural language processing. The field of machine learning continues to evolve rapidly, with new techniques and algorithms being developed constantly. Deep learning models have shown remarkable performance in tasks such as image recognition, speech processing, and text generation. Researchers at universities around the world, including Stanford, MIT, and Cambridge, are pushing the boundaries of what's possible. The impact of AI extends beyond technology companies into healthcare, finance, education, and transportation. Self-driving cars from companies like Tesla are becoming more sophisticated. Medical diagnosis systems are helping doctors identify diseases earlier. Financial institutions use AI for fraud detection and risk assessment. The ethical implications of AI development are being debated by philosophers, technologists, and policymakers. Questions about bias, privacy, and the future of work are at the forefront of these discussions. As we move forward, it's crucial to develop AI systems that are transparent, fair, and beneficial to all of humanity.",
+    "createdAt": "2025-10-30T12:00:00.000Z",
+    "status": "completed",
+    "summary": "Artificial Intelligence has revolutionized many industries in recent years. The impact of AI extends beyond technology companies into healthcare, finance, education, and transportation. The ethical implications of AI development are being debated by philosophers, technologists, and policymakers. As we move forward, it's crucial to develop AI systems that are transparent, fair, and beneficial to all of humanity.",
+    "sentiment": {
+      "label": "positive",
+      "score": 0.91
+    },
+    "entities": [
+      {
+        "type": "ORG",
+        "value": "Google"
+      },
+      {
+        "type": "ORG",
+        "value": "Microsoft"
+      },
+      {
+        "type": "ORG",
+        "value": "OpenAI"
+      },
+      {
+        "type": "ORG",
+        "value": "Stanford"
+      },
+      {
+        "type": "ORG",
+        "value": "MIT"
+      },
+      {
+        "type": "ORG",
+        "value": "Cambridge"
+      },
+      {
+        "type": "MISC",
+        "value": "AI"
+      },
+      {
+        "type": "ORG",
+        "value": "Tesla"
+      }
+    ]
+  }
+]
