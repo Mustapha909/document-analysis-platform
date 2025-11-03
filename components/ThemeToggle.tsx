@@ -1,23 +1,9 @@
-// components/ThemeToggle.tsx
 'use client';
 
 import { useTheme } from 'next-themes';
-import { useEffect, useState } from 'react';
 
 export default function ThemeToggle() {
-  const [mounted, setMounted] = useState(false);
   const { theme, setTheme } = useTheme();
-
-  // Avoid hydration mismatch
-  useEffect(() => {
-    setMounted(true);
-  }, []);
-
-  if (!mounted) {
-    return (
-      <div className="w-14 h-8 bg-gray-200 dark:bg-gray-700 rounded-full"></div>
-    );
-  }
 
   return (
     <button

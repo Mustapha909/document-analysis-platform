@@ -1,4 +1,3 @@
-// components/DocumentList.tsx
 'use client';
 
 import { Document } from '@/types/document';
@@ -18,7 +17,7 @@ export default function DocumentList({
 }: DocumentListProps) {
   // Show skeleton while loading
   if (loading) {
-    return <DocumentListSkeleton count={3} />;
+    return <DocumentListSkeleton />;
   }
 
   // Empty state

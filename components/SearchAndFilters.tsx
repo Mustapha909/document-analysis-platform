@@ -1,4 +1,3 @@
-// components/SearchAndFilters.tsx
 'use client';
 
 import { useState, useEffect, useRef, memo } from 'react';
