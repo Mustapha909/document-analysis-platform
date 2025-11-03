@@ -32,7 +32,7 @@ function SearchAndFilters({
   hasActiveFilters,
 }: SearchAndFiltersProps) {
   const [localSearchQuery, setLocalSearchQuery] = useState(searchQuery);
-  const debounceTimerRef = useRef<NodeJS.Timeout>();
+const debounceTimerRef = useRef<NodeJS.Timeout | null>(null);
 
   // Debounced search (300ms)
   useEffect(() => {
