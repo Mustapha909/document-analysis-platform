@@ -1,7 +1,6 @@
 import type { Metadata } from 'next';
 import './globals.css';
 import { ThemeProvider } from '@/components/ThemeProvider';
-import QueueStatus from '@/components/QueueStatus';
 
 export const metadata: Metadata = {
   title: 'Document Analysis Platform',
@@ -25,7 +24,6 @@ export default function RootLayout({
           </a>
 
           <main id="main-content">{children}</main>
-          <QueueStatus />
         </ThemeProvider>
       </body>
     </html>

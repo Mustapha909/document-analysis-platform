@@ -1,47 +1,376 @@
 [
   {
     "id": "sample-1",
-    "title": "Short Sample",
-    "content": "This is a short document for testing. It contains just a few sentences to demonstrate basic functionality.",
-    "createdAt": "2025-10-30T10:00:00.000Z",
-    "status": "completed",
-    "summary": "This is a short document for testing. It contains just a few sentences to demonstrate basic functionality. It is intended to be used as a test case for a new tool or feature. For more information, or to try out your own tool, visit the tool's official website.",
-    "sentiment": {
-      "label": "neutral",
-      "score": 0.9
-    },
-    "entities": []
+    "title": "Introduction to Artificial Intelligence",
+    "content": "Artificial Intelligence (AI) has revolutionized the way we approach problem-solving in the modern world. From machine learning algorithms to neural networks, AI systems are becoming increasingly sophisticated. Companies like Google, Microsoft, and OpenAI are at the forefront of this revolution, developing tools that can understand natural language, recognize patterns in data, and even generate creative content. The impact of AI extends beyond technology companies into healthcare, where it aids in diagnosis and treatment planning, and finance, where it powers algorithmic trading systems.",
+    "createdAt": "2025-11-01T10:00:00.000Z",
+    "status": "idle",
+    "summary": null,
+    "sentiment": null,
+    "entities": null
   },
   {
     "id": "sample-2",
-    "title": "Medium Sample",
-    "content": "This is a medium-length document. It contains several paragraphs to test how the system handles moderate amounts of text. The content discusses various topics including technology, innovation, and user experience. This sample should be sufficient to generate meaningful analysis results from the AI models. The document continues with more detailed information about document processing and natural language understanding capabilities.",
-    "createdAt": "2025-10-30T11:00:00.000Z",
+    "title": "Climate Change and Global Warming",
+    "content": "Climate change represents one of the most pressing challenges facing humanity today. Rising global temperatures, melting ice caps, and extreme weather events are becoming more frequent. Scientists at institutions like NASA, NOAA, and the United Nations have documented alarming trends in atmospheric carbon dioxide levels. Cities like Miami, Venice, and Jakarta face existential threats from rising sea levels. International agreements such as the Paris Climate Accord aim to limit global temperature increases, but implementation remains challenging across different nations and economies.",
+    "createdAt": "2025-11-01T11:00:00.000Z",
     "status": "completed",
-    "summary": "This is a medium-length document. It contains several paragraphs to test how the system handles moderate amounts of text. This sample should be sufficient to generate meaningful analysis results from the AI models. The document continues with more detailed information about document processing and natural language understanding capabilities.",
+    "summary": "Rising global temperatures, melting ice caps, and extreme weather events are becoming more frequent. Cities like Miami, Venice, and Jakarta face existential threats from rising sea levels. International agreements such as the Paris Climate Accord aim to limit global temperature increases. But implementation remains challenging across different nations and economies.",
     "sentiment": {
-      "label": "neutral",
-      "score": 0.74
+      "label": "negative",
+      "score": 0.72
     },
     "entities": [
       {
+        "type": "ORG",
+        "value": "NASA"
+      },
+      {
+        "type": "ORG",
+        "value": "NOAA"
+      },
+      {
+        "type": "ORG",
+        "value": "United Nations"
+      },
+      {
+        "type": "LOC",
+        "value": "Miami"
+      },
+      {
+        "type": "LOC",
+        "value": "Venice"
+      },
+      {
+        "type": "LOC",
+        "value": "Jakarta"
+      },
+      {
         "type": "MISC",
-        "value": "AI"
+        "value": "Paris Climate Accord"
       }
     ]
   },
   {
     "id": "sample-3",
-    "title": "Long Sample",
-    "content": "This is a long document designed to test the system's capability with substantial text. Artificial Intelligence has revolutionized many industries in recent years. Companies like Google, Microsoft, and OpenAI have made significant advances in natural language processing. The field of machine learning continues to evolve rapidly, with new techniques and algorithms being developed constantly. Deep learning models have shown remarkable performance in tasks such as image recognition, speech processing, and text generation. Researchers at universities around the world, including Stanford, MIT, and Cambridge, are pushing the boundaries of what's possible. The impact of AI extends beyond technology companies into healthcare, finance, education, and transportation. Self-driving cars from companies like Tesla are becoming more sophisticated. Medical diagnosis systems are helping doctors identify diseases earlier. Financial institutions use AI for fraud detection and risk assessment. The ethical implications of AI development are being debated by philosophers, technologists, and policymakers. Questions about bias, privacy, and the future of work are at the forefront of these discussions. As we move forward, it's crucial to develop AI systems that are transparent, fair, and beneficial to all of humanity.",
-    "createdAt": "2025-10-30T12:00:00.000Z",
+    "title": "The Future of Space Exploration",
+    "content": "Space exploration has entered a new era with private companies joining traditional space agencies. SpaceX, founded by Elon Musk, has revolutionized rocket technology with reusable boosters. Blue Origin and Virgin Galactic are making space tourism a reality. NASA's Artemis program aims to return humans to the Moon, while missions to Mars are being planned by multiple organizations. The James Webb Space Telescope, launched from French Guiana, is providing unprecedented views of distant galaxies. China's space program has successfully landed rovers on Mars and established the Tiangong space station.",
+    "createdAt": "2025-11-01T12:00:00.000Z",
     "status": "completed",
-    "summary": "Artificial Intelligence has revolutionized many industries in recent years. The impact of AI extends beyond technology companies into healthcare, finance, education, and transportation. The ethical implications of AI development are being debated by philosophers, technologists, and policymakers. As we move forward, it's crucial to develop AI systems that are transparent, fair, and beneficial to all of humanity.",
+    "summary": "Space exploration has entered a new era with private companies joining traditional space agencies. China's space program has successfully landed rovers on Mars and established the Tiangong space station. NASA's Artemis program aims to return humans to the Moon, while missions to Mars are being planned by multiple organizations.",
     "sentiment": {
       "label": "positive",
-      "score": 0.91
+      "score": 0.89
     },
     "entities": [
+      {
+        "type": "ORG",
+        "value": "SpaceX"
+      },
+      {
+        "type": "ORG",
+        "value": "El"
+      },
+      {
+        "type": "PER",
+        "value": "##on"
+      },
+      {
+        "type": "ORG",
+        "value": "Musk"
+      },
+      {
+        "type": "ORG",
+        "value": "Blue Origin"
+      },
+      {
+        "type": "ORG",
+        "value": "Virgin Galactic"
+      },
+      {
+        "type": "ORG",
+        "value": "NASA"
+      },
+      {
+        "type": "LOC",
+        "value": "Moon"
+      },
+      {
+        "type": "LOC",
+        "value": "Mars"
+      },
+      {
+        "type": "LOC",
+        "value": "French Guiana"
+      },
+      {
+        "type": "LOC",
+        "value": "China"
+      },
+      {
+        "type": "LOC",
+        "value": "T"
+      },
+      {
+        "type": "LOC",
+        "value": "##iangong"
+      }
+    ]
+  },
+  {
+    "id": "sample-4",
+    "title": "Blockchain Technology and Cryptocurrency",
+    "content": "Blockchain technology has emerged as a revolutionary approach to distributed computing and digital transactions. Bitcoin, created by the mysterious Satoshi Nakamoto, pioneered the cryptocurrency revolution. Ethereum introduced smart contracts, enabling decentralized applications. Major financial institutions like JPMorgan, Goldman Sachs, and Fidelity are exploring blockchain for securities trading. Countries like El Salvador have adopted Bitcoin as legal tender, while others develop central bank digital currencies. The technology promises transparency and security but faces challenges with scalability and energy consumption.",
+    "createdAt": "2025-11-01T13:00:00.000Z",
+    "status": "completed",
+    "summary": "Blockchain technology has emerged as a revolutionary approach to distributed computing and digital transactions. The technology promises transparency and security but faces challenges with scalability and energy consumption. Major financial institutions like JPMorgan, Goldman Sachs, and Fidelity are exploring blockchain for securities trading. Countries like El Salvador have adopted Bitcoin as legal tender.",
+    "sentiment": {
+      "label": "positive",
+      "score": 0.8
+    },
+    "entities": [
+      {
+        "type": "PER",
+        "value": "Sato"
+      },
+      {
+        "type": "PER",
+        "value": "##shi Nakamoto"
+      },
+      {
+        "type": "ORG",
+        "value": "JPMorgan"
+      },
+      {
+        "type": "ORG",
+        "value": "Goldman Sachs"
+      },
+      {
+        "type": "ORG",
+        "value": "Fidelity"
+      },
+      {
+        "type": "LOC",
+        "value": "El Salvador"
+      }
+    ]
+  },
+  {
+    "id": "sample-5",
+    "title": "Advances in Medical Technology",
+    "content": "Modern medicine has witnessed remarkable breakthroughs in recent years. CRISPR gene editing technology, developed by researchers including Jennifer Doudna and Emmanuelle Charpentier, offers potential cures for genetic diseases. Immunotherapy treatments are revolutionizing cancer care at institutions like Memorial Sloan Kettering and MD Anderson. Telemedicine platforms expanded rapidly during the COVID-19 pandemic, with companies like Teladoc and Zocdoc becoming household names. Artificial organs and 3D-printed tissues are moving from research labs to clinical trials, offering hope to patients awaiting transplants.",
+    "createdAt": "2025-11-01T14:00:00.000Z",
+    "status": "completed",
+    "summary": "Modern medicine has witnessed remarkable breakthroughs in recent years. CRISPR gene editing technology offers potential cures for genetic diseases. Telemedicine platforms expanded rapidly during the COVID-19 pandemic. Artificial organs and 3D-printed tissues are moving from research labs to clinical trials.",
+    "sentiment": {
+      "label": "positive",
+      "score": 0.93
+    },
+    "entities": [
+      {
+        "type": "PER",
+        "value": "Jennifer Doudna"
+      },
+      {
+        "type": "PER",
+        "value": "Emmanuel"
+      },
+      {
+        "type": "PER",
+        "value": "##le Charpentier"
+      },
+      {
+        "type": "ORG",
+        "value": "Memorial Sloan Kettering"
+      },
+      {
+        "type": "ORG",
+        "value": "MD Anderson"
+      },
+      {
+        "type": "MISC",
+        "value": "CO"
+      },
+      {
+        "type": "ORG",
+        "value": "Teladoc"
+      },
+      {
+        "type": "ORG",
+        "value": "Zocdoc"
+      }
+    ]
+  },
+  {
+    "id": "sample-6",
+    "title": "Electric Vehicles and Sustainable Transportation",
+    "content": "The automotive industry is undergoing a massive transformation toward electric vehicles. Tesla has led this revolution, proving that electric cars can be high-performance and desirable. Traditional manufacturers like Ford, General Motors, and Volkswagen are investing billions in electrification. Charging infrastructure is expanding globally, with networks like ChargePoint and Electrify America building thousands of stations. Countries including Norway, Netherlands, and China are leading in EV adoption. Battery technology continues to improve, with companies like CATL and LG Chem developing higher capacity and faster-charging solutions.",
+    "createdAt": "2025-11-01T15:00:00.000Z",
+    "status": "completed",
+    "summary": "The automotive industry is undergoing a massive transformation toward electric vehicles. Tesla has led this revolution, proving that electric cars can be high-performance and desirable. Traditional manufacturers like Ford, General Motors, and Volkswagen are investing billions in electrification. Countries including Norway, Netherlands, and China are leading in EV adoption.",
+    "sentiment": {
+      "label": "positive",
+      "score": 0.96
+    },
+    "entities": [
+      {
+        "type": "ORG",
+        "value": "Ford"
+      },
+      {
+        "type": "ORG",
+        "value": "General Motors"
+      },
+      {
+        "type": "ORG",
+        "value": "Volkswagen"
+      },
+      {
+        "type": "ORG",
+        "value": "ChargePoint"
+      },
+      {
+        "type": "ORG",
+        "value": "Electrify America"
+      },
+      {
+        "type": "LOC",
+        "value": "Norway"
+      },
+      {
+        "type": "LOC",
+        "value": "Netherlands"
+      },
+      {
+        "type": "LOC",
+        "value": "China"
+      },
+      {
+        "type": "ORG",
+        "value": "CATL"
+      },
+      {
+        "type": "ORG",
+        "value": "LG Chem"
+      }
+    ]
+  },
+  {
+    "id": "sample-7",
+    "title": "Social Media and Digital Communication",
+    "content": "Social media platforms have fundamentally changed how humans communicate and share information. Facebook, now Meta, connects billions of users worldwide. Twitter serves as a real-time news platform, while Instagram and TikTok dominate visual content sharing. LinkedIn has become essential for professional networking. These platforms face ongoing challenges with content moderation, privacy concerns, and misinformation. Regulators in the European Union, United States, and Australia are implementing new laws to govern digital platforms. The rise of decentralized social networks like Mastodon represents a shift toward user-controlled platforms.",
+    "createdAt": "2025-11-01T16:00:00.000Z",
+    "status": "completed",
+    "summary": "Social media platforms have fundamentally changed how humans communicate and share information. These platforms face ongoing challenges with content moderation, privacy concerns, and misinformation. Regulators in the European Union, United States, and Australia are implementing new laws to govern digital platforms. The rise of decentralized social networks like Mastodon represents a shift toward user-controlled platforms.",
+    "sentiment": {
+      "label": "neutral",
+      "score": 0.66
+    },
+    "entities": [
+      {
+        "type": "ORG",
+        "value": "Facebook"
+      },
+      {
+        "type": "ORG",
+        "value": "Meta"
+      },
+      {
+        "type": "ORG",
+        "value": "Twitter"
+      },
+      {
+        "type": "ORG",
+        "value": "Instagram"
+      },
+      {
+        "type": "ORG",
+        "value": "T"
+      },
+      {
+        "type": "ORG",
+        "value": "##ikTok"
+      },
+      {
+        "type": "ORG",
+        "value": "LinkedIn"
+      },
+      {
+        "type": "ORG",
+        "value": "European Union"
+      },
+      {
+        "type": "LOC",
+        "value": "United States"
+      },
+      {
+        "type": "LOC",
+        "value": "Australia"
+      }
+    ]
+  },
+  {
+    "id": "sample-8",
+    "title": "Renewable Energy and Sustainability",
+    "content": "The transition to renewable energy sources is accelerating globally. Solar panel costs have dropped dramatically, making solar energy competitive with fossil fuels. Wind farms, both onshore and offshore, are generating increasing amounts of electricity. Denmark and Scotland are leaders in wind energy adoption. Hydroelectric power remains significant in countries like Norway, Brazil, and Canada. Energy storage solutions from companies like Tesla and BYD are solving intermittency challenges. Green hydrogen is emerging as a potential solution for heavy industry and long-distance transportation.",
+    "createdAt": "2025-11-01T17:00:00.000Z",
+    "status": "completed",
+    "summary": "Solar panel costs have dropped dramatically, making solar energy competitive with fossil fuels. Wind farms, both onshore and offshore, are generating increasing amounts of electricity. Hydroelectric power remains significant in countries like Norway, Brazil, and Canada. Green hydrogen is emerging as a potential solution for heavy industry and long-distance transportation.",
+    "sentiment": {
+      "label": "positive",
+      "score": 0.86
+    },
+    "entities": [
+      {
+        "type": "LOC",
+        "value": "Denmark"
+      },
+      {
+        "type": "LOC",
+        "value": "Scotland"
+      },
+      {
+        "type": "LOC",
+        "value": "Norway"
+      },
+      {
+        "type": "LOC",
+        "value": "Brazil"
+      },
+      {
+        "type": "LOC",
+        "value": "Canada"
+      },
+      {
+        "type": "ORG",
+        "value": "Tesla"
+      },
+      {
+        "type": "ORG",
+        "value": "B"
+      },
+      {
+        "type": "ORG",
+        "value": "##YD"
+      }
+    ]
+  },
+  {
+    "id": "sample-9",
+    "title": "Quantum Computing Revolution",
+    "content": "Quantum computing represents a paradigm shift in computational power. IBM, Google, and Microsoft are racing to achieve quantum supremacy and develop practical quantum computers. Google's Sycamore processor demonstrated quantum advantage in specific calculations. Research institutions including MIT, Caltech, and Oxford are making fundamental breakthroughs in quantum theory. Applications range from drug discovery to cryptography and optimization problems. Companies like Rigetti and IonQ are building commercially available quantum systems. However, challenges remain in maintaining quantum coherence and error correction.",
+    "createdAt": "2025-11-01T18:00:00.000Z",
+    "status": "completed",
+    "summary": "Quantum computing represents a paradigm shift in computational power. IBM, Google, and Microsoft are racing to achieve quantum supremacy and develop practical quantum computers. Research institutions including MIT, Caltech, and Oxford are making fundamental breakthroughs in quantum theory. Applications range from drug discovery to cryptography and optimization problems.",
+    "sentiment": {
+      "label": "positive",
+      "score": 0.9
+    },
+    "entities": [
+      {
+        "type": "ORG",
+        "value": "IBM"
+      },
       {
         "type": "ORG",
         "value": "Google"
@@ -51,12 +380,8 @@
         "value": "Microsoft"
       },
       {
-        "type": "ORG",
-        "value": "OpenAI"
-      },
-      {
-        "type": "ORG",
-        "value": "Stanford"
+        "type": "MISC",
+        "value": "S"
       },
       {
         "type": "ORG",
@@ -64,15 +389,73 @@
       },
       {
         "type": "ORG",
-        "value": "Cambridge"
-      },
-      {
-        "type": "MISC",
-        "value": "AI"
+        "value": "Caltech"
       },
       {
         "type": "ORG",
-        "value": "Tesla"
+        "value": "Oxford"
+      },
+      {
+        "type": "ORG",
+        "value": "IonQ"
+      }
+    ]
+  },
+  {
+    "id": "sample-10",
+    "title": "The Evolution of Remote Work",
+    "content": "Remote work has transformed from a rare perk to a standard practice for millions of workers globally. The COVID-19 pandemic accelerated this shift dramatically. Companies like Zoom, Slack, and Microsoft Teams became essential tools for distributed teams. Tech giants including Twitter, Shopify, and Salesforce adopted permanent remote or hybrid policies. Cities like Austin, Denver, and Lisbon have seen influxes of remote workers. This shift has implications for real estate, with demand increasing for home offices while commercial office space faces uncertainty. Work-life balance, productivity, and collaboration are being redefined for the digital age.",
+    "createdAt": "2025-11-01T19:00:00.000Z",
+    "status": "completed",
+    "summary": "Remote work has transformed from a rare perk to a standard practice for millions of workers globally. Companies like Zoom, Slack, and Microsoft Teams became essential tools for distributed teams. Tech giants including Twitter, Shopify, and Salesforce adopted permanent remote or hybrid policies. Cities like Austin, Denver, and Lisbon have seen influxes of remote workers.",
+    "sentiment": {
+      "label": "positive",
+      "score": 0.79
+    },
+    "entities": [
+      {
+        "type": "MISC",
+        "value": "CO"
+      },
+      {
+        "type": "MISC",
+        "value": "19"
+      },
+      {
+        "type": "ORG",
+        "value": "Zoom"
+      },
+      {
+        "type": "ORG",
+        "value": "Slack"
+      },
+      {
+        "type": "ORG",
+        "value": "Microsoft Teams"
+      },
+      {
+        "type": "ORG",
+        "value": "Twitter"
+      },
+      {
+        "type": "ORG",
+        "value": "Shopify"
+      },
+      {
+        "type": "ORG",
+        "value": "Salesforce"
+      },
+      {
+        "type": "LOC",
+        "value": "Austin"
+      },
+      {
+        "type": "LOC",
+        "value": "Denver"
+      },
+      {
+        "type": "LOC",
+        "value": "Lisbon"
       }
     ]
   }

@@ -16,8 +16,6 @@ interface AnalysisState {
   progress: AnalysisProgress;
   result: AnalysisResult;
   error: string | null;
-  isQueued: boolean;
-  queuePosition: number | null;
 }
 
 export function useAnalysis(documentId: string, onComplete: () => void) {
@@ -26,8 +24,6 @@ export function useAnalysis(documentId: string, onComplete: () => void) {
     progress: { message: '', progress: 0 },
     result: {},
     error: null,
-    isQueued: false,
-    queuePosition: null,
   });
 
   const startAnalysis = useCallback(async () => {
@@ -36,8 +32,6 @@ export function useAnalysis(documentId: string, onComplete: () => void) {
       progress: { message: 'Starting...', progress: 0 },
       result: {},
       error: null,
-      isQueued: false,
-      queuePosition: null,
     });
 
     try {
@@ -49,39 +43,16 @@ export function useAnalysis(documentId: string, onComplete: () => void) {
 
       const contentType = response.headers.get('content-type');
 
-      // Check if queued (JSON response)
+      // Check for errors (JSON response)
       if (contentType?.includes('application/json')) {
         const data = await response.json();
 
-        if (data.error) {
-          setState((prev) => ({
-            ...prev,
-            isAnalyzing: false,
-            error: data.error,
-          }));
-          return;
-        }
-
-        if (data.queued) {
-          setState((prev) => ({
-            ...prev,
-            isQueued: true,
-            queuePosition: data.position,
-            progress: {
-              message: data.message || `Queued at position ${data.position}`,
-              progress: 0,
-            },
-          }));
-
-          // Show queue message but don't poll - user should manually retry
-          setTimeout(() => {
-            setState((prev) => ({
-              ...prev,
-              isAnalyzing: false,
-            }));
-          }, 3000);
-          return;
-        }
+        setState((prev) => ({
+          ...prev,
+          isAnalyzing: false,
+          error: data.error || 'Failed to start analysis',
+        }));
+        return;
       }
 
       // If SSE stream
@@ -93,7 +64,6 @@ export function useAnalysis(documentId: string, onComplete: () => void) {
 
         while (true) {
           const { done, value } = await reader.read();
-
           if (done) break;
 
           const chunk = decoder.decode(value);
@@ -159,7 +129,6 @@ export function useAnalysis(documentId: string, onComplete: () => void) {
         break;
 
       case 'error':
-        console.error('Analysis error:', data);
         setState((prev) => ({
           ...prev,
           error: data.message || 'An error occurred',
@@ -174,8 +143,6 @@ export function useAnalysis(documentId: string, onComplete: () => void) {
       progress: { message: '', progress: 0 },
       result: {},
       error: null,
-      isQueued: false,
-      queuePosition: null,
     });
   }, []);
 

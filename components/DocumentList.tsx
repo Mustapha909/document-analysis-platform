@@ -1,3 +1,4 @@
+// components/DocumentList.tsx
 'use client';
 
 import { Document } from '@/types/document';

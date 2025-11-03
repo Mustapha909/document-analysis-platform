@@ -256,12 +256,6 @@ function DocumentItem({ document, onUpdate }: DocumentItemProps) {
           >
             View Details
           </Link>
-          <Link
-            href={`/compare?doc1=${document.id}`}
-            className="px-4 py-2 bg-purple-600 dark:bg-purple-500 text-white rounded text-sm hover:bg-purple-700 dark:hover:bg-purple-600 text-center transition-colors"
-          >
-            Compare
-          </Link>
 
           <button
             onClick={handleAnalyze}
@@ -314,7 +308,7 @@ function DocumentItem({ document, onUpdate }: DocumentItemProps) {
               Delete Document?
             </h3>
             <p className="text-gray-600 dark:text-gray-400 mb-4">
-              Are you sure you want to delete `{document.title}`? This action
+              Are you sure you want to delete "{document.title}"? This action
               cannot be undone.
             </p>
             <div className="flex gap-2 justify-end">
