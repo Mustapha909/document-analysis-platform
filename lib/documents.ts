@@ -2,16 +2,37 @@ import { Document } from '@/types/document';
 import fs from 'fs';
 import path from 'path';
 
-const DATA_FILE = path.join(process.cwd(), 'data', 'documents.json');
+// Detect if we're running on Vercel (read-only FS)
+const isVercel = process.env.VERCEL === '1';
 
-// Read all documents from JSON file
+// Use /tmp on Vercel, otherwise local /data folder
+const DATA_FILE = isVercel
+  ? path.join('/tmp', 'documents.json')
+  : path.join(process.cwd(), 'data', 'documents.json');
+
+console.log('📁 Using data file path:', DATA_FILE);
+
+// Helper: read all documents from file
 export function getDocuments(): Document[] {
   try {
-    const fileContents = fs.readFileSync(DATA_FILE, 'utf8');
-    return JSON.parse(fileContents);
+    if (fs.existsSync(DATA_FILE)) {
+      const fileContents = fs.readFileSync(DATA_FILE, 'utf8');
+      return JSON.parse(fileContents);
+    } else {
+      return [];
+    }
   } catch (error) {
-    // If file doesn't exist or is invalid, return empty array
+    console.error('Failed to read documents file:', error);
     return [];
+  }
+}
+
+// Helper: save documents to file (only works in writable env)
+export function saveDocuments(documents: Document[]): void {
+  try {
+    fs.writeFileSync(DATA_FILE, JSON.stringify(documents, null, 2), 'utf8');
+  } catch (error) {
+    console.error('Failed to save documents:', error);
   }
 }
 
@@ -19,11 +40,6 @@ export function getDocuments(): Document[] {
 export function getDocumentById(id: string): Document | null {
   const documents = getDocuments();
   return documents.find((doc) => doc.id === id) || null;
-}
-
-// Save documents to JSON file
-export function saveDocuments(documents: Document[]): void {
-  fs.writeFileSync(DATA_FILE, JSON.stringify(documents, null, 2), 'utf8');
 }
 
 // Add new document
@@ -41,7 +57,6 @@ export function updateDocument(
 ): Document | null {
   const documents = getDocuments();
   const index = documents.findIndex((doc) => doc.id === id);
-
   if (index === -1) return null;
 
   documents[index] = { ...documents[index], ...updates };
@@ -53,10 +68,7 @@ export function updateDocument(
 export function deleteDocument(id: string): boolean {
   const documents = getDocuments();
   const filteredDocuments = documents.filter((doc) => doc.id !== id);
-
-  if (filteredDocuments.length === documents.length) {
-    return false; // Document not found
-  }
+  if (filteredDocuments.length === documents.length) return false;
 
   saveDocuments(filteredDocuments);
   return true;
